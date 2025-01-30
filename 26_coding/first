@@ -1,1 +1,72 @@
+# Left aligned Triangle (Normal)
+def left_aligned_triangle(rows):
+    for i in range(1, rows + 1):
+        print("*" * i)
 
+left_aligned_triangle(5)
+................................................................
+#Right_aligned Triangle(Mirrored Left)
+def Right_aligned_triangle(rows):
+    for i in range(1, rows + 1):
+        print(' '* (rows - i) + "*" * i)
+
+Right_aligned_triangle(5)
+................................................................
+#Inverted Traingle(Bottom to top)
+def inverted_triangle(rows):
+    for i in range(rows, 0, -1):
+        print('*' * i)
+
+inverted_triangle(5)
+.................................................................
+#Right_aligned Inverted Triangle
+def inverted_right_aligned_triangle(rows):
+    for i in range(rows, 0, -1):
+        print(' '* (rows - i) + '*' * i)
+
+inverted_right_aligned_triangle(5)
+..................................................................
+#ُSymmetric Triangle(Isosceles)
+def symmetric_triangle(rows):
+    for i in range(1, rows + 1):
+        print(' ' * (rows - i) + '*' * (2 *i - 1))
+
+symmetric_triangle(5)
+.................................................................
+#Diamond shape
+def diamond(rows):
+    #upper part of the diamond
+    for i in range(1, rows + 1, 2):
+        print(' ' * ((rows - i)// 2) + '*' * i)
+
+    # Lower part of the diamond
+    for i in range(rows - 2, 0, -2):
+        print(' ' * ((rows - i) // 2)+ '*' * i)
+
+diamond(7)
+..................................................................
+#Square_with_diagonals(n):
+def square_with_diagonals(n):
+    for i in range(n):
+        for j in range(n):
+            if i == j or i + j == n - 1:
+                print('*', end=' ')
+            else:
+                print(' ', end=' ')
+        print()
+
+square_with_diagonals(7)
+
+..................................................................
+#square_with_diagonals_with_sides
+def square_with_diagonals(n):
+    for i in range(n):
+        for j in range(n):
+            if i == 0 or i == n - 1 or j == 0 or j == n - 1 or i == j or i + j == n - 1:
+                print('*', end=' ')
+            else:
+                print(' ', end=' ')
+        print()
+
+square_with_diagonals(7)
+.................................................................
